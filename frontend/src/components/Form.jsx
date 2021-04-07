@@ -40,6 +40,10 @@ const Form = () => {
        }
     }
     const Move=async()=>{
+      
+      if(from===undefined){
+      from=''
+      }
       console.log(from,to,mname)
       await axios.post("/api/move",{from:from,to:to,name:mname})
       setshow2(true)

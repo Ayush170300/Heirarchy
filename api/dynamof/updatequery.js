@@ -12,7 +12,7 @@ const updatequery=(from,to,name)=>{
 const params={
   TableName: 'heirchy',
   ExpressionAttributeValues:{
-      ":v1":from+"/"+name
+      ":v1":(from==='')?name:from+"/"+name
     
   },  
       ExpressionAttributeNames:{
@@ -39,9 +39,9 @@ docClient.scan(params, function(err, data) {
        Items.forEach((e)=>{
            str=to+"/"+name+e.URL.split(name)[1]
               len = str.split("/").length
-
-              deletequery(e.URL)
               writedata({URL:str,name:e.name,level:len})
+              deletequery(e.URL)
+              
 
        
         

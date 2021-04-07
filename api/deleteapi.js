@@ -13,6 +13,7 @@ router.post('/api/delete',(req,res)=>{
 router.post('/api/move',(req,res)=>{
   const {from,to,name}=(req.body)
   updatequery(from,to,name)
+  console.log(from,to,name)
   res.json(req.body)
 })
 
