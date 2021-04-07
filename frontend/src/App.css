@@ -1,0 +1,14 @@
+h1 {
+  margin: 30px 20px;
+  color: white;
+}
+
+h3 {
+  color: goldenrod;
+}
+
+.btn {
+  background-color: gray;
+  color: white;
+  border: 1px solid;
+}
