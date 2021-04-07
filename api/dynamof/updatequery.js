@@ -2,10 +2,10 @@ const AWS = require('aws-sdk');
 const writedata=require("./writedata")
 const deletequery=require("./deletequery")
 AWS.config.update({
-    accessKeyId: 'AKIAZZ6HNMF57SXFDQVH',
-      secretAccessKey: '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',
-      region: 'us-east-2',
-  });
+  accessKeyId: 'AKIAZZ6HNMF53C32TQGJ',
+    secretAccessKey: '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',
+    region: 'us-east-2',
+});
 const updatequery=(from,to,name)=>{
   var docClient = new AWS.DynamoDB.DocumentClient();
 
